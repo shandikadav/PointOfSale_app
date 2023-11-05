@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E34CD16-A45E-4D98-B8CA-5A9214E64EBF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>POINT_OF_SALE</RootNamespace>
+    <AssemblyName>POINT OF SALE</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Admin\UC_DataBarang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controller\Admin\UC_DataBarang.Designer.cs">
+      <DependentUpon>UC_DataBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Admin\UC_DataKaryawan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controller\Admin\UC_DataKaryawan.Designer.cs">
+      <DependentUpon>UC_DataKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Admin\UC_DataPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controller\Admin\UC_DataPayment.Designer.cs">
+      <DependentUpon>UC_DataPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Admin\UC_DataUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controller\Admin\UC_DataUser.Designer.cs">
+      <DependentUpon>UC_DataUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Cashier\UC_DetailTransaksi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controller\Cashier\UC_DetailTransaksi.Designer.cs">
+      <DependentUpon>UC_DetailTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Cashier\UC_Transaksi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controller\Cashier\UC_Transaksi.Designer.cs">
+      <DependentUpon>UC_Transaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_AdminDashboard.Designer.cs">
+      <DependentUpon>Frm_AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Cashier.Designer.cs">
+      <DependentUpon>Frm_Cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_login.Designer.cs">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controller\Admin\UC_DataBarang.resx">
+      <DependentUpon>UC_DataBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Admin\UC_DataKaryawan.resx">
+      <DependentUpon>UC_DataKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Admin\UC_DataPayment.resx">
+      <DependentUpon>UC_DataPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Admin\UC_DataUser.resx">
+      <DependentUpon>UC_DataUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Cashier\UC_DetailTransaksi.resx">
+      <DependentUpon>UC_DetailTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\Cashier\UC_Transaksi.resx">
+      <DependentUpon>UC_Transaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_AdminDashboard.resx">
+      <DependentUpon>Frm_AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Cashier.resx">
+      <DependentUpon>Frm_Cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_login.resx">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklists.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction-history.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
