@@ -48,8 +48,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,87 +70,89 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Admin\UC_DataBarang.cs">
+    <Compile Include="Model\Context\DBContext.cs" />
+    <Compile Include="Model\Entity\User.cs" />
+    <Compile Include="View\UserControl\Admin\UC_DataBarang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controller\Admin\UC_DataBarang.Designer.cs">
+    <Compile Include="View\UserControl\Admin\UC_DataBarang.Designer.cs">
       <DependentUpon>UC_DataBarang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\Admin\UC_DataKaryawan.cs">
+    <Compile Include="View\UserControl\Admin\UC_DataKaryawan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controller\Admin\UC_DataKaryawan.Designer.cs">
+    <Compile Include="View\UserControl\Admin\UC_DataKaryawan.Designer.cs">
       <DependentUpon>UC_DataKaryawan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\Admin\UC_DataPayment.cs">
+    <Compile Include="View\UserControl\Admin\UC_DataPayment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controller\Admin\UC_DataPayment.Designer.cs">
+    <Compile Include="View\UserControl\Admin\UC_DataPayment.Designer.cs">
       <DependentUpon>UC_DataPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\Admin\UC_DataUser.cs">
+    <Compile Include="View\UserControl\Admin\UC_DataUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controller\Admin\UC_DataUser.Designer.cs">
+    <Compile Include="View\UserControl\Admin\UC_DataUser.Designer.cs">
       <DependentUpon>UC_DataUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\Cashier\UC_DetailTransaksi.cs">
+    <Compile Include="View\UserControl\Cashier\UC_DetailTransaksi.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controller\Cashier\UC_DetailTransaksi.Designer.cs">
+    <Compile Include="View\UserControl\Cashier\UC_DetailTransaksi.Designer.cs">
       <DependentUpon>UC_DetailTransaksi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\Cashier\UC_Transaksi.cs">
+    <Compile Include="View\UserControl\Cashier\UC_Transaksi.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controller\Cashier\UC_Transaksi.Designer.cs">
+    <Compile Include="View\UserControl\Cashier\UC_Transaksi.Designer.cs">
       <DependentUpon>UC_Transaksi.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Frm_AdminDashboard.cs">
+    <Compile Include="View\Form\Frm_AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Frm_AdminDashboard.Designer.cs">
+    <Compile Include="View\Form\Frm_AdminDashboard.Designer.cs">
       <DependentUpon>Frm_AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Frm_Cashier.cs">
+    <Compile Include="View\Form\Frm_Cashier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Frm_Cashier.Designer.cs">
+    <Compile Include="View\Form\Frm_Cashier.Designer.cs">
       <DependentUpon>Frm_Cashier.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Frm_login.cs">
+    <Compile Include="View\Form\Frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Frm_login.Designer.cs">
+    <Compile Include="View\Form\Frm_login.Designer.cs">
       <DependentUpon>Frm_login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controller\Admin\UC_DataBarang.resx">
+    <EmbeddedResource Include="View\UserControl\Admin\UC_DataBarang.resx">
       <DependentUpon>UC_DataBarang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\Admin\UC_DataKaryawan.resx">
+    <EmbeddedResource Include="View\UserControl\Admin\UC_DataKaryawan.resx">
       <DependentUpon>UC_DataKaryawan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\Admin\UC_DataPayment.resx">
+    <EmbeddedResource Include="View\UserControl\Admin\UC_DataPayment.resx">
       <DependentUpon>UC_DataPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\Admin\UC_DataUser.resx">
+    <EmbeddedResource Include="View\UserControl\Admin\UC_DataUser.resx">
       <DependentUpon>UC_DataUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\Cashier\UC_DetailTransaksi.resx">
+    <EmbeddedResource Include="View\UserControl\Cashier\UC_DetailTransaksi.resx">
       <DependentUpon>UC_DetailTransaksi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\Cashier\UC_Transaksi.resx">
+    <EmbeddedResource Include="View\UserControl\Cashier\UC_Transaksi.resx">
       <DependentUpon>UC_Transaksi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Frm_AdminDashboard.resx">
+    <EmbeddedResource Include="View\Form\Frm_AdminDashboard.resx">
       <DependentUpon>Frm_AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Frm_Cashier.resx">
+    <EmbeddedResource Include="View\Form\Frm_Cashier.resx">
       <DependentUpon>Frm_Cashier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Frm_login.resx">
+    <EmbeddedResource Include="View\Form\Frm_login.resx">
       <DependentUpon>Frm_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -154,6 +165,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -231,13 +243,17 @@
     <None Include="Resources\logout1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
+    <Folder Include="Controller\" />
+    <Folder Include="Model\Repository\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shopping-cart %281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\transaction-history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

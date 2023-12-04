@@ -15,6 +15,23 @@ namespace POINT_OF_SALE.Controller
         public UC_DataUser()
         {
             InitializeComponent();
+            showData();     
+        }
+
+        private void btn_simpan_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void showData()
+        {
+            
+            
+        }
+
+        private void UC_DataUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
