@@ -17,9 +17,9 @@ namespace POINT_OF_SALE
             InitializeComponent();
             lbl_changedata.Text = "";
             uC_DataKaryawan1.Visible = false;
-            uC_DataUser1.Visible = false;
             uC_DataBarang1.Visible = false;
             uC_DataPayment1.Visible = false;
+            uC_DataUserEdit.Visible = false;
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace POINT_OF_SALE
         private void btn_menuuser_Click(object sender, EventArgs e)
         {
             lbl_changedata.Text = "Data User";
-            uC_DataUser1.Visible = true;
+            uC_DataUserEdit.Visible = true;
             uC_DataKaryawan1.Visible = false;
             uC_DataBarang1.Visible = false;
             uC_DataPayment1.Visible = false;
@@ -45,7 +45,7 @@ namespace POINT_OF_SALE
         {
             lbl_changedata.Text = "Data Karyawan";
             uC_DataKaryawan1.Visible = true;
-            uC_DataUser1.Visible = false;
+            uC_DataUserEdit.Visible = false;
             uC_DataBarang1.Visible = false;
             uC_DataPayment1.Visible = false;
         }
@@ -55,7 +55,7 @@ namespace POINT_OF_SALE
             lbl_changedata.Text = "Data Barang";
             uC_DataBarang1.Visible = true;
             uC_DataKaryawan1.Visible = false;
-            uC_DataUser1.Visible = false;
+            uC_DataUserEdit.Visible = false;
             uC_DataPayment1.Visible = false;
         }
 
@@ -69,7 +69,7 @@ namespace POINT_OF_SALE
             lbl_changedata.Text = "Data Payment";
             uC_DataPayment1.Visible = true;
             uC_DataKaryawan1.Visible = false;
-            uC_DataUser1.Visible = false;
+            uC_DataUserEdit.Visible = false;
             uC_DataBarang1.Visible = false;
         }
 
@@ -83,7 +83,7 @@ namespace POINT_OF_SALE
                 Hide();
                 lbl_changedata.Text = "";
                 uC_DataKaryawan1.Visible = false;
-                uC_DataUser1.Visible = false;
+                uC_DataUserEdit.Visible = false;
                 uC_DataBarang1.Visible = false;
                 uC_DataPayment1.Visible = false;
             } else

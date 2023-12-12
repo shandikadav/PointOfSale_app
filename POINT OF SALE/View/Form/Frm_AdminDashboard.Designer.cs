@@ -1,4 +1,6 @@
-﻿namespace POINT_OF_SALE
+﻿using POINT_OF_SALE.Model.Context;
+
+namespace POINT_OF_SALE
 {
     partial class Frm_AdminDashboard
     {
@@ -29,26 +31,26 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lbl_changedata = new System.Windows.Forms.Label();
-            this.lbl_menu = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_datapayment = new System.Windows.Forms.Button();
             this.btn_menubarang = new System.Windows.Forms.Button();
             this.btn_menuuser = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btn_menukaryawan = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_changedata = new System.Windows.Forms.Label();
+            this.lbl_menu = new System.Windows.Forms.Label();
+            this.btn_close = new System.Windows.Forms.Button();
             this.uC_DataPayment1 = new POINT_OF_SALE.Controller.UC_DataPayment();
             this.uC_DataBarang1 = new POINT_OF_SALE.Controller.UC_DataBarang();
-            this.uC_DataUser1 = new POINT_OF_SALE.Controller.UC_DataUser();
             this.uC_DataKaryawan1 = new POINT_OF_SALE.Controller.UC_DataKaryawan();
+            this.uC_DataUserEdit = new POINT_OF_SALE.Controller.UC_DataUser();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,77 +67,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 630);
             this.panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 150);
-            this.panel2.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(91, 67);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 19);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Admin";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel4.Controls.Add(this.lbl_changedata);
-            this.panel4.Controls.Add(this.lbl_menu);
-            this.panel4.Controls.Add(this.btn_close);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(200, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(751, 60);
-            this.panel4.TabIndex = 11;
-            // 
-            // lbl_changedata
-            // 
-            this.lbl_changedata.AutoSize = true;
-            this.lbl_changedata.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_changedata.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_changedata.Location = new System.Drawing.Point(67, 23);
-            this.lbl_changedata.Name = "lbl_changedata";
-            this.lbl_changedata.Size = new System.Drawing.Size(134, 19);
-            this.lbl_changedata.TabIndex = 13;
-            this.lbl_changedata.Text = "Data Karyawan";
-            // 
-            // lbl_menu
-            // 
-            this.lbl_menu.AutoSize = true;
-            this.lbl_menu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_menu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_menu.Location = new System.Drawing.Point(18, 23);
-            this.lbl_menu.Name = "lbl_menu";
-            this.lbl_menu.Size = new System.Drawing.Size(53, 19);
-            this.lbl_menu.TabIndex = 12;
-            this.lbl_menu.Text = "Menu";
-            // 
-            // btn_close
-            // 
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.FlatAppearance.BorderSize = 0;
-            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_close.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.ForeColor = System.Drawing.Color.Red;
-            this.btn_close.Location = new System.Drawing.Point(691, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(60, 60);
-            this.btn_close.TabIndex = 9;
-            this.btn_close.Text = "X";
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // btn_logout
             // 
@@ -209,6 +140,16 @@
             this.btn_menuuser.UseVisualStyleBackColor = false;
             this.btn_menuuser.Click += new System.EventHandler(this.btn_menuuser_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 150);
+            this.panel2.TabIndex = 2;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::POINT_OF_SALE.Properties.Resources.user__1_;
@@ -218,6 +159,18 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(91, 67);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 19);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Admin";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // btn_menukaryawan
             // 
@@ -237,6 +190,55 @@
             this.btn_menukaryawan.UseVisualStyleBackColor = false;
             this.btn_menukaryawan.Click += new System.EventHandler(this.btn_menukaryawan_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel4.Controls.Add(this.lbl_changedata);
+            this.panel4.Controls.Add(this.lbl_menu);
+            this.panel4.Controls.Add(this.btn_close);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(200, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(751, 60);
+            this.panel4.TabIndex = 11;
+            // 
+            // lbl_changedata
+            // 
+            this.lbl_changedata.AutoSize = true;
+            this.lbl_changedata.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_changedata.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_changedata.Location = new System.Drawing.Point(67, 23);
+            this.lbl_changedata.Name = "lbl_changedata";
+            this.lbl_changedata.Size = new System.Drawing.Size(134, 19);
+            this.lbl_changedata.TabIndex = 13;
+            this.lbl_changedata.Text = "Data Karyawan";
+            // 
+            // lbl_menu
+            // 
+            this.lbl_menu.AutoSize = true;
+            this.lbl_menu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_menu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_menu.Location = new System.Drawing.Point(18, 23);
+            this.lbl_menu.Name = "lbl_menu";
+            this.lbl_menu.Size = new System.Drawing.Size(53, 19);
+            this.lbl_menu.TabIndex = 12;
+            this.lbl_menu.Text = "Menu";
+            // 
+            // btn_close
+            // 
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.FlatAppearance.BorderSize = 0;
+            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_close.ForeColor = System.Drawing.Color.Red;
+            this.btn_close.Location = new System.Drawing.Point(691, 0);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(60, 60);
+            this.btn_close.TabIndex = 9;
+            this.btn_close.Text = "X";
+            this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // uC_DataPayment1
             // 
             this.uC_DataPayment1.Location = new System.Drawing.Point(200, 59);
@@ -251,13 +253,6 @@
             this.uC_DataBarang1.Size = new System.Drawing.Size(751, 570);
             this.uC_DataBarang1.TabIndex = 14;
             // 
-            // uC_DataUser1
-            // 
-            this.uC_DataUser1.Location = new System.Drawing.Point(200, 59);
-            this.uC_DataUser1.Name = "uC_DataUser1";
-            this.uC_DataUser1.Size = new System.Drawing.Size(751, 570);
-            this.uC_DataUser1.TabIndex = 13;
-            // 
             // uC_DataKaryawan1
             // 
             this.uC_DataKaryawan1.Location = new System.Drawing.Point(200, 59);
@@ -265,14 +260,21 @@
             this.uC_DataKaryawan1.Size = new System.Drawing.Size(751, 570);
             this.uC_DataKaryawan1.TabIndex = 12;
             // 
+            // uC_DataUserEdit
+            // 
+            this.uC_DataUserEdit.Location = new System.Drawing.Point(200, 60);
+            this.uC_DataUserEdit.Name = "uC_DataUserEdit";
+            this.uC_DataUserEdit.Size = new System.Drawing.Size(751, 570);
+            this.uC_DataUserEdit.TabIndex = 16;
+            // 
             // Frm_AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 630);
+            this.Controls.Add(this.uC_DataUserEdit);
             this.Controls.Add(this.uC_DataPayment1);
             this.Controls.Add(this.uC_DataBarang1);
-            this.Controls.Add(this.uC_DataUser1);
             this.Controls.Add(this.uC_DataKaryawan1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -284,9 +286,9 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -307,8 +309,8 @@
         private System.Windows.Forms.Button btn_close;
         private Controller.UC_DataKaryawan uC_DataKaryawan1;
         private System.Windows.Forms.Label lbl_changedata;
-        private Controller.UC_DataUser uC_DataUser1;
         private Controller.UC_DataBarang uC_DataBarang1;
         private Controller.UC_DataPayment uC_DataPayment1;
+        private Controller.UC_DataUser uC_DataUserEdit;
     }
 }

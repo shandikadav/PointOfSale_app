@@ -70,8 +70,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\Context\DBContext.cs" />
+    <Compile Include="Model\Entity\Employee.cs" />
     <Compile Include="Model\Entity\User.cs" />
+    <Compile Include="Model\Repository\UserRepository.cs" />
     <Compile Include="View\UserControl\Admin\UC_DataBarang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -242,10 +245,7 @@
   <ItemGroup>
     <None Include="Resources\logout1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Model\Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\shopping-cart %281%29.png" />
   </ItemGroup>
