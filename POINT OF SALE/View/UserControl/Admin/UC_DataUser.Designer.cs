@@ -169,6 +169,7 @@
             this.dgv_user.Name = "dgv_user";
             this.dgv_user.Size = new System.Drawing.Size(742, 220);
             this.dgv_user.TabIndex = 40;
+            this.dgv_user.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_user_CellContentClick);
             // 
             // tbluserBindingSource
             // 
@@ -181,6 +182,7 @@
             this.txt_employeeid.Name = "txt_employeeid";
             this.txt_employeeid.Size = new System.Drawing.Size(100, 20);
             this.txt_employeeid.TabIndex = 52;
+            this.txt_employeeid.Visible = false;
             // 
             // UC_DataUser
             // 

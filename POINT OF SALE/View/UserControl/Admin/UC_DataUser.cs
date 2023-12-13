@@ -150,6 +150,20 @@ namespace POINT_OF_SALE.Controller
             usersController.Delete(users);
             ShowDataGrid();
         }
+
+        private void dgv_user_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgv_user.Rows[e.RowIndex];
+
+                txt_userid.Text = row.Cells["id_user"].Value.ToString();
+                txt_username.Text = row.Cells["username"].Value.ToString();
+                txt_password.Text = row.Cells["password"].Value.ToString();
+                txt_employeeid.Text = row.Cells["id_employee"].Value.ToString();
+                cmb_nama.Text = row.Cells["firstName"].Value.ToString();
+            }
+        }
     }
     }
 
