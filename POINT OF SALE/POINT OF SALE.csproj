@@ -71,11 +71,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\EmployeeController.cs" />
+    <Compile Include="Controller\PaymentController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\Context\DBContext.cs" />
     <Compile Include="Model\Entity\Employee.cs" />
+    <Compile Include="Model\Entity\Payment.cs" />
     <Compile Include="Model\Entity\User.cs" />
     <Compile Include="Model\Repository\EmployeeRepository.cs" />
+    <Compile Include="Model\Repository\PaymentRepository.cs" />
     <Compile Include="Model\Repository\UserRepository.cs" />
     <Compile Include="View\UserControl\Admin\UC_DataBarang.cs">
       <SubType>UserControl</SubType>
