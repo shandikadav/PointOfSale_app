@@ -47,6 +47,7 @@ namespace POINT_OF_SALE.Controller
 
             usersController.Create(users);
             ShowDataGrid();
+            clearData();
         }
 
         public void ShowDataGrid()
@@ -138,6 +139,7 @@ namespace POINT_OF_SALE.Controller
 
             usersController.Update(users);
             ShowDataGrid();
+            clearData();
         }
 
         private void btn_hapus_Click(object sender, EventArgs e)
@@ -149,6 +151,7 @@ namespace POINT_OF_SALE.Controller
 
             usersController.Delete(users);
             ShowDataGrid();
+            clearData();
         }
 
         private void dgv_user_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -163,6 +166,16 @@ namespace POINT_OF_SALE.Controller
                 txt_employeeid.Text = row.Cells["id_employee"].Value.ToString();
                 cmb_nama.Text = row.Cells["firstName"].Value.ToString();
             }
+        }
+
+        private void clearData()
+        {
+            txt_employeeid.Text = "";
+            txt_userid.Text = "";
+            txt_username.Text = "";
+            txt_password.Text = "";
+            cmb_nama.Text = "";
+            txt_userid.Focus();
         }
     }
     }
