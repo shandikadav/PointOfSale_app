@@ -36,6 +36,7 @@
             this.btn_hapus = new System.Windows.Forms.Button();
             this.btn_ubah = new System.Windows.Forms.Button();
             this.btn_simpan = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_payment)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,6 +51,8 @@
             // 
             // txt_paymentid
             // 
+            this.txt_paymentid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_paymentid.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_paymentid.Location = new System.Drawing.Point(200, 309);
             this.txt_paymentid.Name = "txt_paymentid";
             this.txt_paymentid.Size = new System.Drawing.Size(355, 20);
@@ -67,10 +70,12 @@
             // 
             // cmb_method
             // 
+            this.cmb_method.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmb_method.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_method.FormattingEnabled = true;
             this.cmb_method.Location = new System.Drawing.Point(200, 347);
             this.cmb_method.Name = "cmb_method";
-            this.cmb_method.Size = new System.Drawing.Size(355, 21);
+            this.cmb_method.Size = new System.Drawing.Size(355, 27);
             this.cmb_method.TabIndex = 1;
             // 
             // label8
@@ -125,10 +130,22 @@
             this.btn_simpan.UseVisualStyleBackColor = false;
             this.btn_simpan.Click += new System.EventHandler(this.btn_simpan_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label3.Location = new System.Drawing.Point(196, 316);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(360, 19);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "_______________________________________";
+            // 
             // UC_DataPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.btn_hapus);
             this.Controls.Add(this.btn_ubah);
             this.Controls.Add(this.btn_simpan);
@@ -137,6 +154,7 @@
             this.Controls.Add(this.txt_paymentid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgv_payment);
+            this.Controls.Add(this.label3);
             this.Name = "UC_DataPayment";
             this.Size = new System.Drawing.Size(751, 570);
             this.Load += new System.EventHandler(this.UC_DataPayment_Load);
@@ -156,5 +174,6 @@
         private System.Windows.Forms.Button btn_hapus;
         private System.Windows.Forms.Button btn_ubah;
         private System.Windows.Forms.Button btn_simpan;
+        private System.Windows.Forms.Label label3;
     }
 }

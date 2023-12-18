@@ -47,7 +47,7 @@ namespace POINT_OF_SALE.Model.Repository
         public int Update(Employee employee)
         {
             int result = 0;
-            string sql = @"UPDATE employee SET firstname = @firstname, lastname = @lastname, contact = @contact, email = @email, position = @position WHERE id_employee = @employeeid";
+            string sql = @"UPDATE employee SET id_employee = @employeeid, firstname = @firstname, lastname = @lastname, contact = @contact, email = @email, position = @position WHERE id_employee = @employeeid";
 
             using (SqlCommand cmd = new SqlCommand(sql, _conn))
             {
