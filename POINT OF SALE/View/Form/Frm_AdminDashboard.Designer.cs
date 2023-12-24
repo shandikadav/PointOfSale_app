@@ -37,16 +37,16 @@ namespace POINT_OF_SALE
             this.btn_menuuser = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_firstname = new System.Windows.Forms.Label();
             this.btn_menukaryawan = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbl_changedata = new System.Windows.Forms.Label();
             this.lbl_menu = new System.Windows.Forms.Label();
             this.btn_close = new System.Windows.Forms.Button();
+            this.uC_DataUserEdit = new POINT_OF_SALE.Controller.UC_DataUser();
             this.uC_DataPayment1 = new POINT_OF_SALE.Controller.UC_DataPayment();
             this.uC_DataBarang1 = new POINT_OF_SALE.Controller.UC_DataBarang();
             this.uC_DataKaryawan1 = new POINT_OF_SALE.Controller.UC_DataKaryawan();
-            this.uC_DataUserEdit = new POINT_OF_SALE.Controller.UC_DataUser();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,6 +67,7 @@ namespace POINT_OF_SALE
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 630);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_logout
             // 
@@ -144,11 +145,12 @@ namespace POINT_OF_SALE
             // 
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.lbl_firstname);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 150);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox1
             // 
@@ -160,17 +162,17 @@ namespace POINT_OF_SALE
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // label7
+            // lbl_firstname
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(91, 67);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 19);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Admin";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.lbl_firstname.AutoSize = true;
+            this.lbl_firstname.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_firstname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_firstname.Location = new System.Drawing.Point(91, 67);
+            this.lbl_firstname.Name = "lbl_firstname";
+            this.lbl_firstname.Size = new System.Drawing.Size(61, 19);
+            this.lbl_firstname.TabIndex = 11;
+            this.lbl_firstname.Text = "Admin";
+            this.lbl_firstname.Click += new System.EventHandler(this.label7_Click);
             // 
             // btn_menukaryawan
             // 
@@ -239,33 +241,37 @@ namespace POINT_OF_SALE
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
+            // uC_DataUserEdit
+            // 
+            this.uC_DataUserEdit.BackColor = System.Drawing.SystemColors.Window;
+            this.uC_DataUserEdit.Location = new System.Drawing.Point(200, 60);
+            this.uC_DataUserEdit.Name = "uC_DataUserEdit";
+            this.uC_DataUserEdit.Size = new System.Drawing.Size(751, 570);
+            this.uC_DataUserEdit.TabIndex = 16;
+            // 
             // uC_DataPayment1
             // 
-            this.uC_DataPayment1.Location = new System.Drawing.Point(200, 59);
+            this.uC_DataPayment1.BackColor = System.Drawing.SystemColors.Window;
+            this.uC_DataPayment1.Location = new System.Drawing.Point(200, 60);
             this.uC_DataPayment1.Name = "uC_DataPayment1";
             this.uC_DataPayment1.Size = new System.Drawing.Size(751, 570);
             this.uC_DataPayment1.TabIndex = 15;
             // 
             // uC_DataBarang1
             // 
-            this.uC_DataBarang1.Location = new System.Drawing.Point(200, 59);
+            this.uC_DataBarang1.BackColor = System.Drawing.SystemColors.Window;
+            this.uC_DataBarang1.Location = new System.Drawing.Point(200, 60);
             this.uC_DataBarang1.Name = "uC_DataBarang1";
             this.uC_DataBarang1.Size = new System.Drawing.Size(751, 570);
             this.uC_DataBarang1.TabIndex = 14;
             // 
             // uC_DataKaryawan1
             // 
-            this.uC_DataKaryawan1.Location = new System.Drawing.Point(200, 59);
+            this.uC_DataKaryawan1.BackColor = System.Drawing.SystemColors.Window;
+            this.uC_DataKaryawan1.Location = new System.Drawing.Point(200, 60);
             this.uC_DataKaryawan1.Name = "uC_DataKaryawan1";
             this.uC_DataKaryawan1.Size = new System.Drawing.Size(751, 570);
             this.uC_DataKaryawan1.TabIndex = 12;
-            // 
-            // uC_DataUserEdit
-            // 
-            this.uC_DataUserEdit.Location = new System.Drawing.Point(200, 60);
-            this.uC_DataUserEdit.Name = "uC_DataUserEdit";
-            this.uC_DataUserEdit.Size = new System.Drawing.Size(751, 570);
-            this.uC_DataUserEdit.TabIndex = 16;
             // 
             // Frm_AdminDashboard
             // 
@@ -273,16 +279,17 @@ namespace POINT_OF_SALE
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 630);
             this.Controls.Add(this.uC_DataUserEdit);
-            this.Controls.Add(this.uC_DataPayment1);
-            this.Controls.Add(this.uC_DataBarang1);
-            this.Controls.Add(this.uC_DataKaryawan1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.uC_DataKaryawan1);
+            this.Controls.Add(this.uC_DataPayment1);
+            this.Controls.Add(this.uC_DataBarang1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_AdminDashboard";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_AdminDashboard";
+            this.Load += new System.EventHandler(this.Frm_AdminDashboard_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -297,7 +304,7 @@ namespace POINT_OF_SALE
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_firstname;
         private System.Windows.Forms.Button btn_menukaryawan;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_menuuser;

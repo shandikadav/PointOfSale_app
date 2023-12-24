@@ -247,6 +247,7 @@
             this.Controls.Add(this.label8);
             this.Name = "UC_DataBarang";
             this.Size = new System.Drawing.Size(751, 570);
+            this.Load += new System.EventHandler(this.UC_DataBarang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_barang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

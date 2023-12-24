@@ -33,7 +33,7 @@
             this.btn_detailtransaksi = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_firstname = new System.Windows.Forms.Label();
             this.btn_transaksi = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbl_changedata = new System.Windows.Forms.Label();
@@ -100,7 +100,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.lbl_firstname);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 150);
@@ -116,16 +116,17 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // label7
+            // lbl_firstname
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(91, 67);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 19);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Kasir";
+            this.lbl_firstname.AutoSize = true;
+            this.lbl_firstname.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_firstname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_firstname.Location = new System.Drawing.Point(91, 67);
+            this.lbl_firstname.Name = "lbl_firstname";
+            this.lbl_firstname.Size = new System.Drawing.Size(50, 19);
+            this.lbl_firstname.TabIndex = 11;
+            this.lbl_firstname.Text = "Kasir";
+            this.lbl_firstname.Click += new System.EventHandler(this.lbl_firstname_Click);
             // 
             // btn_transaksi
             // 
@@ -196,14 +197,14 @@
             // 
             // uC_DetailTransaksi1
             // 
-            this.uC_DetailTransaksi1.Location = new System.Drawing.Point(199, 57);
+            this.uC_DetailTransaksi1.Location = new System.Drawing.Point(200, 60);
             this.uC_DetailTransaksi1.Name = "uC_DetailTransaksi1";
             this.uC_DetailTransaksi1.Size = new System.Drawing.Size(751, 570);
             this.uC_DetailTransaksi1.TabIndex = 14;
             // 
             // uC_Transaksi1
             // 
-            this.uC_Transaksi1.Location = new System.Drawing.Point(199, 60);
+            this.uC_Transaksi1.Location = new System.Drawing.Point(200, 60);
             this.uC_Transaksi1.Name = "uC_Transaksi1";
             this.uC_Transaksi1.Size = new System.Drawing.Size(751, 570);
             this.uC_Transaksi1.TabIndex = 13;
@@ -221,6 +222,7 @@
             this.Name = "Frm_Cashier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Cashier";
+            this.Load += new System.EventHandler(this.Frm_Cashier_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -238,7 +240,7 @@
         private System.Windows.Forms.Button btn_detailtransaksi;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_firstname;
         private System.Windows.Forms.Button btn_transaksi;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbl_changedata;

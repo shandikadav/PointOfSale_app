@@ -25,7 +25,7 @@ namespace POINT_OF_SALE
             Frm_Cashier cashier = new Frm_Cashier();
 
             SqlConnection conn = new SqlConnection("Data Source=DESKTOP-Q6I09KV\\SQLEXPRESS;initial catalog=DB_POS;integrated security=true");
-            SqlCommand cmd = new SqlCommand("SELECT username, password, position FROM users INNER JOIN employee ON users.id_employee = employee.id_employee WHERE username = '" + txt_username.Text+"' AND password = '"+txt_password.Text+"'", conn);
+            SqlCommand cmd = new SqlCommand("SELECT username, password, position, firstName FROM users INNER JOIN employee ON users.id_employee = employee.id_employee WHERE username = '" + txt_username.Text+"' AND password = '"+txt_password.Text+"'", conn);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -40,15 +40,19 @@ namespace POINT_OF_SALE
                 {
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        if (dt.Rows[i]["position"].ToString() == "Administrator")
+                        string position = dt.Rows[i]["position"].ToString();
+                        string firstName = dt.Rows[i]["firstName"].ToString();
+                        if (position == "Administrator")
                         {
                             MessageBox.Show("Kamu berhasil Login sebagai " + dt.Rows[i][2], "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            adminDashboard.FirstName = firstName;
                             adminDashboard.Show();
                             Hide();
                         }
-                        else if (dt.Rows[i]["position"].ToString() == "Cashier")
+                        else if (position == "Cashier")
                         {
                             MessageBox.Show("Kamu berhasil Login sebagai " + dt.Rows[i][2], "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            cashier.FirstName = firstName;
                             cashier.Show();
                             Hide();
                         }

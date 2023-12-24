@@ -130,5 +130,10 @@ namespace POINT_OF_SALE.Controller
         {
 
         }
+
+        private void UC_DataBarang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

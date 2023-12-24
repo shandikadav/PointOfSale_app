@@ -13,6 +13,7 @@ namespace POINT_OF_SALE.View
 {
     public partial class Frm_Cashier : Form
     {
+        public string FirstName {  get; set; }
         public Frm_Cashier()
         {
             InitializeComponent();
@@ -56,6 +57,16 @@ namespace POINT_OF_SALE.View
             {
                 // do nothing
             }
+        }
+
+        private void lbl_firstname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Frm_Cashier_Load(object sender, EventArgs e)
+        {
+            lbl_firstname.Text = FirstName;
         }
     }
 }

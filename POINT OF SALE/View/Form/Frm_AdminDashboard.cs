@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,7 @@ namespace POINT_OF_SALE
 {
     public partial class Frm_AdminDashboard : Form
     {
+        public string FirstName {  get; set; }
         public Frm_AdminDashboard()
         {
             InitializeComponent();
@@ -90,6 +92,22 @@ namespace POINT_OF_SALE
             {
                 // do nothing
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Frm_AdminDashboard_Load_1(object sender, EventArgs e)
+        {
+            lbl_firstname.Text = FirstName;
         }
     }
 }
