@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using POINT_OF_SALE.Controller.Cashier;
 
 namespace POINT_OF_SALE
 {
@@ -23,6 +24,7 @@ namespace POINT_OF_SALE
         {
             Frm_AdminDashboard adminDashboard = new Frm_AdminDashboard();
             Frm_Cashier cashier = new Frm_Cashier();
+            UC_Transaksi uC_Transaksi = new UC_Transaksi();
 
             SqlConnection conn = new SqlConnection("Data Source=DESKTOP-Q6I09KV\\SQLEXPRESS;initial catalog=DB_POS;integrated security=true");
             SqlCommand cmd = new SqlCommand("SELECT username, password, position, firstName FROM users INNER JOIN employee ON users.id_employee = employee.id_employee WHERE username = '" + txt_username.Text+"' AND password = '"+txt_password.Text+"'", conn);
@@ -53,6 +55,7 @@ namespace POINT_OF_SALE
                         {
                             MessageBox.Show("Kamu berhasil Login sebagai " + dt.Rows[i][2], "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             cashier.FirstName = firstName;
+                            uC_Transaksi.CashierName = firstName;
                             cashier.Show();
                             Hide();
                         }

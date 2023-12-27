@@ -1,4 +1,5 @@
 ﻿using POINT_OF_SALE.Controller;
+using POINT_OF_SALE.Controller.Cashier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,13 +15,17 @@ namespace POINT_OF_SALE.View
     public partial class Frm_Cashier : Form
     {
         public string FirstName {  get; set; }
+       
         public Frm_Cashier()
         {
             InitializeComponent();
             lbl_changedata.Text = "";
             uC_Transaksi1.Visible = false;
             uC_DetailTransaksi1.Visible = false;
+
         }
+       
+
 
         private void btn_transaksi_Click(object sender, EventArgs e)
         {
@@ -67,6 +72,12 @@ namespace POINT_OF_SALE.View
         private void Frm_Cashier_Load(object sender, EventArgs e)
         {
             lbl_firstname.Text = FirstName;
+            
+        }
+
+        private void uC_DetailTransaksi1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

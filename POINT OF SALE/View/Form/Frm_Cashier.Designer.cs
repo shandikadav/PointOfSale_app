@@ -91,7 +91,7 @@
             this.btn_detailtransaksi.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_detailtransaksi.Size = new System.Drawing.Size(200, 50);
             this.btn_detailtransaksi.TabIndex = 18;
-            this.btn_detailtransaksi.Text = "Detail Transaksi   ";
+            this.btn_detailtransaksi.Text = "Histori Transaksi   ";
             this.btn_detailtransaksi.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btn_detailtransaksi.UseVisualStyleBackColor = false;
             this.btn_detailtransaksi.Click += new System.EventHandler(this.btn_detailtransaksi_Click);
@@ -201,9 +201,11 @@
             this.uC_DetailTransaksi1.Name = "uC_DetailTransaksi1";
             this.uC_DetailTransaksi1.Size = new System.Drawing.Size(751, 570);
             this.uC_DetailTransaksi1.TabIndex = 14;
+            this.uC_DetailTransaksi1.Load += new System.EventHandler(this.uC_DetailTransaksi1_Load);
             // 
             // uC_Transaksi1
             // 
+            this.uC_Transaksi1.CashierName = null;
             this.uC_Transaksi1.Location = new System.Drawing.Point(200, 60);
             this.uC_Transaksi1.Name = "uC_Transaksi1";
             this.uC_Transaksi1.Size = new System.Drawing.Size(751, 570);

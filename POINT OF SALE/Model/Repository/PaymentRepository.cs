@@ -85,5 +85,25 @@ namespace POINT_OF_SALE.Model.Repository
             }
             return result;
         }
+
+        public List<Payment> GetPaymentName()
+        {
+            string sql = @"SELECT id_payment, metode as method FROM payment";
+            List<Payment> paymentList = new List<Payment>();
+            using (SqlCommand cmd = new SqlCommand(sql, _conn))
+            {
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        Payment payment = new Payment();
+                        payment.Method = rd["method"].ToString();
+                        payment.PaymentId = rd["id_payment"].ToString();
+                        paymentList.Add(payment);
+                    }
+                }
+            }
+            return paymentList;
+        }
     }
 }

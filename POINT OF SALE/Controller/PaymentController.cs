@@ -106,5 +106,16 @@ namespace POINT_OF_SALE.Controller
             }
             return result;
         }
+
+        public List<Payment> GetPaymentName()
+        {
+            List<Payment> list = new List<Payment>();
+            using (DBContext context = new DBContext())
+            {
+                _repository = new PaymentRepository(context);
+                list = _repository.GetPaymentName();
+            }
+            return list;
+        }
     }
 }

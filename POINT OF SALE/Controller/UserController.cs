@@ -143,5 +143,16 @@ namespace POINT_OF_SALE.Controller
             }
             return list;
         }
+
+        public List<Employee> GetEmployeeNameByPosition()
+        {
+            List<Employee> list = new List<Employee>();
+            using (DBContext context = new DBContext())
+            {
+                _repository = new UserRepository(context);
+                list = _repository.GetEmployeeNameByPosition();
+            }
+            return list;
+        }
     }
 }

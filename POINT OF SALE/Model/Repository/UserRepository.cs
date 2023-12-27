@@ -109,5 +109,26 @@ namespace POINT_OF_SALE.Model.Repository
             }
             return userList;
         }
+
+        public List<Employee> GetEmployeeNameByPosition()
+        {
+            string sql = @"SELECT id_employee, firstName, position FROM employee WHERE position = 'Cashier'";
+            List<Employee> userList = new List<Employee>();
+            using (SqlCommand cmd = new SqlCommand(sql, _conn))
+            {
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        Employee employees = new Employee();
+                        employees.FirstName = rd["firstName"].ToString();
+                        employees.IdEmployee = rd["id_employee"].ToString();
+                        employees.Potition = rd["position"].ToString();
+                        userList.Add(employees);
+                    }
+                }
+            }
+            return userList;
+        }
     }
 }

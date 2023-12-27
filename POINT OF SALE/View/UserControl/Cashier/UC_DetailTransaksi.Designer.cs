@@ -28,19 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_idtransact = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_idtransact
             // 
-            this.textBox1.Location = new System.Drawing.Point(133, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(598, 20);
-            this.textBox1.TabIndex = 38;
+            this.txt_idtransact.Location = new System.Drawing.Point(133, 25);
+            this.txt_idtransact.Name = "txt_idtransact";
+            this.txt_idtransact.Size = new System.Drawing.Size(433, 20);
+            this.txt_idtransact.TabIndex = 38;
             // 
             // label2
             // 
@@ -52,38 +51,40 @@
             this.label2.TabIndex = 37;
             this.label2.Text = "Cari Data";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(710, 396);
-            this.dataGridView1.TabIndex = 39;
-            // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.LimeGreen;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Location = new System.Drawing.Point(591, 494);
+            this.button7.Location = new System.Drawing.Point(586, 15);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(140, 40);
             this.button7.TabIndex = 54;
-            this.button7.Text = "Print";
+            this.button7.Text = "Cari";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 89);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(751, 481);
+            this.crystalReportViewer1.TabIndex = 55;
             // 
             // UC_DetailTransaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_idtransact);
             this.Controls.Add(this.label2);
             this.Name = "UC_DetailTransaksi";
             this.Size = new System.Drawing.Size(751, 570);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,9 +92,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_idtransact;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button7;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
     }
 }
